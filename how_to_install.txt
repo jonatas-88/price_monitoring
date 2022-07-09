@@ -1,1 +1,7 @@
-pip install requests-html
+conda install -c conda-forge pandas
+conda install -c conda-forge requests-html
+conda install -c anaconda sqlite
+conda install -c conda-forge configparser
+conda install -c conda-forge python-telegram-bot
+conda install -c conda-forge selenium
+download selenium driver according to browser version
