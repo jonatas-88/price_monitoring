@@ -6,3 +6,4 @@ conda install -c conda-forge python-telegram-bot
 conda install -c conda-forge selenium
 download selenium driver according to browser version
 conda install -c anaconda sqlite
+
