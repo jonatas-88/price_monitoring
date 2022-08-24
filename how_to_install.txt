@@ -1,9 +1,10 @@
-conda install -c conda-forge pandas
-conda install -c conda-forge requests-html
-conda install -c anaconda sqlite
-conda install -c conda-forge configparser
-conda install -c conda-forge python-telegram-bot
-conda install -c conda-forge selenium
+conda install -c conda-forge pandas -y
+conda install -c conda-forge requests-html -y
+conda install -c anaconda sqlite -y
+conda install -c conda-forge configparser -y
+conda install -c conda-forge python-telegram-bot -y
+conda install -c conda-forge selenium -y
+
 download selenium driver according to browser version
-conda install -c anaconda sqlite
+
 
