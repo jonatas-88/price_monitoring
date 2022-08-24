@@ -4,6 +4,7 @@ conda install -c anaconda sqlite -y
 conda install -c conda-forge configparser -y
 conda install -c conda-forge python-telegram-bot -y
 conda install -c conda-forge selenium -y
+conda install -n base ipykernel --update-deps --force-reinstall -y
 
 download selenium driver according to browser version
 
