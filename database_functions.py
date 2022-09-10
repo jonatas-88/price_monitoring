@@ -8,8 +8,8 @@ def connect_to_database(dbname):
     return conn, cur
 
 #CREATE TABLE IF NOT EXISTS
-def create_table(conn, cur,table_name,columns):
-    cur.execute("CREATE TABLE IF NOT EXISTS {} ({})".format(table_name,columns))
+def create_table(conn, cur, table_name, columns):
+    cur.execute("CREATE TABLE IF NOT EXISTS {} ({})".format(table_name, columns))
     conn.commit()
     print("Table {} created".format(table_name))
     return
@@ -21,8 +21,8 @@ def close_connection(conn):
     return
 
 #INSERT DATA INTO TABLE
-def insert_data(conn, cur, table_name,data):
-    cur.execute("INSERT INTO {} VALUES ({})".format(table_name,data))
+def insert_data(conn, cur, table_name, data):
+    cur.execute("INSERT INTO {} VALUES ({})".format(table_name, data))
     conn.commit()
     print("Data inserted")
     return
