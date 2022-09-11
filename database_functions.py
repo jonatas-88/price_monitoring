@@ -26,3 +26,11 @@ def insert_data(conn, cur, table_name, data):
     conn.commit()
     print("Data inserted")
     return
+
+#SELECT DATA FROM TABLE
+def select_data(conn, cur, query):
+    cur.execute(query)
+    data = cur.fetchall()
+    conn.commit()
+    print("Data selected")
+    return data
