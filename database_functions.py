@@ -34,3 +34,10 @@ def select_data(conn, cur, query):
     conn.commit()
     print("Data selected")
     return data
+
+#UPDATE DATA IN TABLE
+def update_data(conn, cur, query):
+    cur.execute(query)
+    conn.commit()
+    print("Data updated")
+    return
