@@ -11,20 +11,20 @@ def connect_to_database(dbname):
 def create_table(conn, cur, table_name, columns):
     cur.execute("CREATE TABLE IF NOT EXISTS {} ({})".format(table_name, columns))
     conn.commit()
-    print("Table {} created".format(table_name))
+    #print("Table {} created".format(table_name))
     return
 
 #CLOSE CONNECTION
 def close_connection(conn):
     conn.close()
-    print("Connection closed")
+    #print("Connection closed")
     return
 
 #INSERT DATA INTO TABLE
 def insert_data(conn, cur, table_name, data):
     cur.execute("INSERT INTO {} VALUES ({})".format(table_name, data))
     conn.commit()
-    print("Data inserted")
+    #print("Data inserted")
     return
 
 #SELECT DATA FROM TABLE
@@ -32,12 +32,12 @@ def select_data(conn, cur, query):
     cur.execute(query)
     data = cur.fetchall()
     conn.commit()
-    print("Data selected")
+    #print("Data selected")
     return data
 
 #UPDATE DATA IN TABLE
 def update_data(conn, cur, query):
     cur.execute(query)
     conn.commit()
-    print("Data updated")
+    #print("Data updated")
     return
