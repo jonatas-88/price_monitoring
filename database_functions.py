@@ -41,3 +41,12 @@ def update_data(conn, cur, query):
     conn.commit()
     #print("Data updated")
     return
+
+#READ ALL TABLES
+def read_all_tables(dbname):
+    conn, cur = connect_to_database(dbname)
+    cur.execute("SELECT name FROM sqlite_master WHERE type='table';")
+    tables = cur.fetchall()
+    conn.commit()
+    #print("Tables read")
+    return tables
