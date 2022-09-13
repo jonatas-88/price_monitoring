@@ -4,3 +4,4 @@ __pycache__/
 *.config
 not_upload.txt
 .handler-saves/
+old/

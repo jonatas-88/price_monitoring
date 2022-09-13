@@ -20,13 +20,6 @@ def close_connection(conn):
     #print("Connection closed")
     return
 
-#INSERT DATA INTO TABLE
-def insert_data(conn, cur, table_name, data):
-    cur.execute("INSERT INTO {} VALUES ({})".format(table_name, data))
-    conn.commit()
-    #print("Data inserted")
-    return
-
 #SELECT DATA FROM TABLE
 def select_data(conn, cur, query):
     cur.execute(query)
@@ -35,11 +28,11 @@ def select_data(conn, cur, query):
     #print("Data selected")
     return data
 
-#UPDATE DATA IN TABLE
-def update_data(conn, cur, query):
+#FUNCTION TO EXECUTE QUERY
+def execute_query(conn, cur, query):
     cur.execute(query)
     conn.commit()
-    #print("Data updated")
+    #print("Query executed")
     return
 
 #READ ALL TABLES
