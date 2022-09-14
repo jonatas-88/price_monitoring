@@ -72,7 +72,8 @@ def register_price_into_db(product_data):
     try:
         conn, cur = dbf.connect_to_database(database)
         dbf.create_table(conn, cur, db_price_table_name, db_price_columns)
-        dbf.insert_data(conn, cur, db_price_table_name, product_data)
+        query = "INSERT INTO {} VALUES ({})".format(db_price_table_name, product_data)
+        dbf.execute_query(conn, cur, query)
         dbf.close_connection(conn)
     except:
         return False
