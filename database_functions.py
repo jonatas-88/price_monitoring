@@ -85,7 +85,7 @@ def read_all_product_id_from_user(dbname, user_id):
     product_id_list = [str(row[0]) for row in data]
     return product_id_list
 
-# CONNECT TO DATABASE AND CREATE TABLE IF IT DOESN'T EXIST
+#CONNECT TO DATABASE AND CREATE TABLE IF IT DOESN'T EXIST
 def update_database(dbname, product_id, user, product_link, target_price):
     try:
         conn, cur = connect_to_database(dbname)
@@ -101,7 +101,7 @@ def update_database(dbname, product_id, user, product_link, target_price):
         pass
     close_connection(conn)
 
-# FUNCTION TO UPDATE PRICE IN DATABASE
+#FUNCTION TO UPDATE PRICE IN DATABASE
 def update_price_database(dbname, product_id, user, target_price):
     try:
         conn, cur = connect_to_database(dbname)
