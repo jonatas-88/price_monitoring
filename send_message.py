@@ -27,7 +27,7 @@ def verify_lower_prices(dbname, user_id):
     for index, row in df.iterrows():
         #if price is lower than target price, send message to user
         if row['price'] <= row['target_price']:
-            message = 'O produto ' + row['product_id'] + ' esta com o preco abaixo do alvo. \nPreco atual: ' + str(row['price']) + '\nPreco alvo: ' + str(row['target_price'])
+            message = 'O produto ' + row['product_id'] + ' esta com o preco abaixo do alvo. \nPreco atual: ' + str(row['price']) + '\nPreco alvo: ' + str(row['target_price']) + '\nPara comprar o produto, utilize o link: ' + str(row['product_link'])
             url = f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={message}"
             requests.get(url)
             sleep(0.5)
